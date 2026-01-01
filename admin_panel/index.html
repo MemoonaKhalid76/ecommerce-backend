@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+<h2>Admin Dashboard</h2>
+<a href="products.html">Manage Products</a>
+
+<div class="stats">
+  <div>Total Orders: <span id="totalOrders">0</span></div>
+  <div>Pending: <span id="pendingOrders">0</span></div>
+  <div>Delivered: <span id="deliveredOrders">0</span></div>
+  <div>Total Revenue: Rs <span id="totalRevenue">0</span></div>
+</div>
+
+<a href="orders.html">View Orders</a>
+
+
+
+<script src="script.js"></script>
+<script>
+  checkAdminAuth();
+  loadDashboard();
+</script>
+
+</body>
+</html>

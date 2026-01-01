@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Orders</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>All Orders</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Phone</th>
+      <th>Total</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="ordersTableBody"></tbody>
+</table>
+
+<script src="script.js"></script>
+<script>
+  checkAdminAuth();
+  fetchOrders();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Details</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Order Details</h2>
+
+<div id="orderInfo"></div>
+
+<h3>Products</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody id="productsTable"></tbody>
+</table>
+
+<br />
+
+<label>Update Status:</label>
+<select id="statusSelect">
+  <option value="Pending">Pending</option>
+  <option value="Delivered">Delivered</option>
+  <option value="Cancelled">Cancelled</option>
+</select>
+
+<button onclick="updateOrder()">Save Status</button>
+
+<script src="script.js"></script>
+<script>
+  checkAdminAuth();
+  loadOrderDetails();
+</script>
+
+</body>
+</html>

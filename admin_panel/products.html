@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Products</h2>
+
+<a href="product-form.html">➕ Add New Product</a>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Sub Category</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="productsTable"></tbody>
+</table>
+
+<script src="script.js"></script>
+<script>
+  checkAdminAuth();
+  fetchProducts();
+</script>
+
+</body>
+</html>
