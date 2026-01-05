@@ -405,21 +405,8 @@ class _ProductDetailScreenState extends State<ProductDetailScreen> {
                child: Row(
                  children: [
                     // Favorite Button placeholder (optional)
-                   GestureDetector(
-                      onTap: () {
-                        // Toggle favorite logic
-                        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Added to favorites!')));
-                      },
-                      child: Container(
-                         padding: const EdgeInsets.all(12),
-                         decoration: BoxDecoration(
-                           border: Border.all(color: Colors.grey.shade300),
-                           borderRadius: BorderRadius.circular(12),
-                         ),
-                         child: const Icon(Icons.favorite_border),
-                      ),
-                   ),
-                   const SizedBox(width: 16),
+
+
                    Expanded(
                      child: ElevatedButton(
                        style: ElevatedButton.styleFrom(

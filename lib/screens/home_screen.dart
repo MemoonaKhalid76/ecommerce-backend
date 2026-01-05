@@ -396,18 +396,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               ),
                                       ),
                                     ),
-                                    Positioned(
-                                      top: 8,
-                                      right: 8,
-                                      child: Container(
-                                        padding: const EdgeInsets.all(6),
-                                        decoration: const BoxDecoration(
-                                          color: Colors.white,
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: const Icon(Icons.favorite_border, size: 16, color: Colors.black),
-                                      ),
-                                    ),
+
                                   ],
                                 ),
                               ),

@@ -64,7 +64,7 @@ class Product {
       );
     }
     
-    final rootUrl = '${apiUri.scheme}://${apiUri.host}:${apiUri.port}';
+    final rootUrl = '${apiUri.scheme}://${apiUri.host}${apiUri.hasPort ? ':${apiUri.port}' : ''}';
 
     imgs = imgs.map((url) {
       if (url.isEmpty) return '';
