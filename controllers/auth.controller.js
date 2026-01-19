@@ -4,7 +4,9 @@ const User = require('../models/User');
 
 // 📧 NODEMAILER CONFIG
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true, // Use SSL
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -92,10 +94,8 @@ exports.requestOtp = async (req, res) => {
 
     let emailSent = false;
 
-    // Check if config looks plausible (App Passwords are usually 16 chars, definitely > 8)
-    const hasValidConfig = process.env.EMAIL_USER &&
-      process.env.EMAIL_PASS &&
-      process.env.EMAIL_PASS.length > 8;
+    // Check if config exists
+    const hasValidConfig = process.env.EMAIL_USER && process.env.EMAIL_PASS;
 
     if (hasValidConfig) {
       try {
